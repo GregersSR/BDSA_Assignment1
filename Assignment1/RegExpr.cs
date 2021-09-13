@@ -34,7 +34,8 @@ namespace Assignment1
         {
             var re = new Regex($"<(?<tag>{tag}).*?>(?<inner>.+?)<\\/\\k<tag>>");
             foreach (Match match in re.Matches(html)) {
-                yield return match.Groups["inner"].Value;
+                var rawInner = match.Groups["inner"].Value;
+                yield return Regex.Replace(rawInner, @"<(?<tag>\w+) ?.*?>(?<inner>.+?)<\/\k<tag>>", @"${inner}");
             }
         }
     }
