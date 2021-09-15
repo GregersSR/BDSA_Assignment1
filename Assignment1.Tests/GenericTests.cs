@@ -19,7 +19,7 @@ namespace Assignment1.Tests
             if (other != null) 
                 return Age.CompareTo(other.Age);
 
-            throw new ArgumentException("Object is not a Person");
+            throw new NullReferenceException("Object cannot be null");
         }
     }
 
