@@ -35,8 +35,6 @@ namespace Assignment1.Tests
         [Fact]
         public void GreaterCount_returns_3_with_5_elements() {
 
-            Console.WriteLine("hit here!!");
-
             // Arrange
             List<Student> students = new List<Student>();
 
